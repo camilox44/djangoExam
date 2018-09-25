@@ -1,0 +1,33 @@
+What is an mvc framework and is django one?
+it is a type "system architecture" that separates creating
+an app into 3 parts (models, views, controllers). Technically
+django is an mtv framework, but mtv follows closely to the
+mvc framework. 
+
+What is an orm?
+object relational mapping essentially break down sql 
+code into a more simple code by doing all the work for 
+you behind the scenes to interact with the database.
+creates a language specific representation of the table
+
+What is the flow of information in a typical request, from when we type an address on our browser, to when we receive the response on our browser?
+User types address
+Browser checks DNS for ip address of url
+DNS server returns ipaddress for url 
+Web browser assembles http request
+Http request is sent off to webserver host
+Web server then sends generated page back to client
+
+Why should we never render a page on a post request?
+because it prevents for example the buying of one thing multiple times. if you render a post request and you refresh the page it just bought that item again
+
+Explain what session is, and why and when we use it
+Session is a tool to use when you need to capture data and hold it for a given period of time. Bridging the gap between stateful data and stateless protocol 
+
+Sessions are a simple way to store data for individual users against a unique session ID. This can be used to persist state information between page requests. Session IDs are normally sent to the browser via session cookies and the ID is used to retrieve existing session data.
+
+What is a POST request? What is a GET request? When would we use each?
+Get is used for fetching/requestin data and is displayed in url 
+Post is used for updating or creating data you want to send to server to server 
+
+Use post when wanting user to send sensitive info to you and get when you just want to navigate the webpage

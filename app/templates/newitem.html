@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+fieldset{
+    margin: auto;
+}
+.newmov{
+    display: flex;
+    float: row;
+    margin: auto;
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+                <a href="/home/">Home</a> |  | <a href="/logout/">Logout</a>
+        </div>
+        <div class="newmov">
+            <fieldset>
+                <legend>New Item</legend>
+                <form action="/additem/" method="POST">
+                    {% csrf_token %}
+                    <p>Item/Product: <input type="text" name="name"></p>
+                    <input type="submit" value="Add Item">
+                </form>
+            </fieldset>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
